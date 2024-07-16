@@ -16,7 +16,7 @@ export class FavoritesComponent implements OnInit {
 
   displayFavList:Favorite[]=[];
   jobsList:Jobs[]=[];
-  favId:Number[]=[];
+  favId:number[]=[];
   
   constructor(private listJobsService:ListJobsService,private router:Router) {}
 
