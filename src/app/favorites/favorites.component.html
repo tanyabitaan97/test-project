@@ -2,9 +2,10 @@
 <div style="background-color: darkgray;display: grid;">
  
 
-    <div *ngFor="let job of jobsList">
+    <div *ngFor="let job of jobsList" >
 
-        <div style="display:flex;background-color: darkgray;padding:15px;">
+        <div style="display:flex;background-color: darkgray;padding:15px;" 
+        *ngIf="jobsList.length>0;">
         <img src={{job.companyLogo}} style="width:5vw;">
         <div style="display:flex;flex-direction: column;">
         <div>
@@ -20,4 +21,7 @@
 
 </div> 
 
+<div *ngIf="jobsList.length==0">
+    <h4 style="text-align: center;">No favorites present. 
+        Please choose favorites from job list to continue.</h4></div>
 </div>
