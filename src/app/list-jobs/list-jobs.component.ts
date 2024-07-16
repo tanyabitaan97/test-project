@@ -19,7 +19,7 @@ export class ListJobsComponent implements OnInit {
 
   jobsList:Jobs[]=[];
   favList:Favorite[]=[];
-  favId:Number[]=[];
+  favId:number[]=[];
 
   ngOnInit() {
 
