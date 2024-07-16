@@ -1,4 +1,4 @@
 export class Favorite {
-    id!: String;
+    id!: string;
     isFavorite?:boolean;
 }

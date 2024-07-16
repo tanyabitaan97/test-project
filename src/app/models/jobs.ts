@@ -1,8 +1,8 @@
 export class Jobs {
     id!: number;
-    companyName?:String;
-    title?: String;
-    companyLogo?: String;
-    reference?:String;
+    companyName?:string;
+    title?: string;
+    companyLogo?: string;
+    reference?:string;
     isFavorite?:boolean;
 }

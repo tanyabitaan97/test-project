@@ -1,12 +1,12 @@
 export class JobDetails {
     id!: number;
-    companyName?:String;
-    title?: String;
-    companyLogo?: String;
-    reference?:String;
-    location?:String;
-    industries?:String[]=[];
-    types?:String[]=[];
+    companyName?:string;
+    title?: string;
+    companyLogo?: string;
+    reference?:string;
+    location?:string;
+    industries?:string[]=[];
+    types?:string[]=[];
     description?:string;
     publishDate?:string;
 }

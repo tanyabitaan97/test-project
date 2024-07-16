@@ -19,7 +19,11 @@ export class AppComponent implements OnInit {
   constructor(private router:Router) {}
 
   ngOnInit(): void {
-    localStorage.setItem('fav','[]');
+    //localStorage.setItem('fav','[]');
+
+    let data =  JSON.parse(localStorage.getItem('fav') || '[]'); 
+    
+    console.log('data is '+JSON.stringify(data));
   }
 
   tabSelectionHome() {

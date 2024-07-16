@@ -19,13 +19,31 @@ export class ListJobsComponent implements OnInit {
 
   jobsList:Jobs[]=[];
   favList:Favorite[]=[];
+  favId:Number[]=[];
 
   ngOnInit() {
 
     this.listJobsService.getJobs().subscribe((jobData:Jobs[])=>{
         this.jobsList=jobData;
     })
-    
+
+    this.favList =  JSON.parse(localStorage.getItem('fav') || '[]');  
+
+   this.favList.forEach((x:Favorite)=>{
+  if(x.isFavorite) {
+  this.favId.push(Number(x.id.split('-')[1]));
+  }
+});
+
+
+let data:Jobs[]=[];
+this.jobsList.forEach((x:Jobs)=>{
+    if(this.favId.includes(x.id)) {
+        x.isFavorite=true;
+    }
+});
+
+
   }
 
   toggleStar(id:number) {
