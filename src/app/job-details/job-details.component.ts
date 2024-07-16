@@ -30,7 +30,7 @@ export class JobDetailsComponent implements OnInit {
 
    this.jobDetails = this.jobDetailsService.getJobById(Number(jobId));
 
-   this.jobDetails[0].industries?.forEach((x:any)=>{
+   this.jobDetails[0].industries?.forEach((x:string)=>{
     var parser = new DOMParser;
     var dom = parser.parseFromString(x,'text/html');
     this.industries = dom.body.textContent!;
