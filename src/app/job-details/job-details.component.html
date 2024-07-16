@@ -1,0 +1,64 @@
+
+<div style="background-color: darkgray;display: flex;flex-direction: column;">
+    <div style="display: flex;background-color:darkgray;width:85px;
+    margin-left:20px;padding: 10px;border:1px solid black;cursor:pointer;" (click)="back()">
+       
+        <img src="./assets/home.png" style="width:2vw;">
+       <h5 style="color: black;">Back</h5> 
+    
+    </div>
+    <br>
+    <div>
+        <div style="display: flex;flex-direction: row;">
+    <div>
+    <img src={{jobDetails[0].companyLogo}} style="width:8vw;">
+</div>
+    <div style="display:flex;flex-direction: column;">
+    <div>
+    <h2 style="color:black;">{{jobDetails[0].companyName}} - {{jobDetails[0].title}}</h2>
+</div>
+<div style="display:flex;">
+    <p style="border-radius:25px;background-color: blue;width:100px;text-align: center;">{{jobDetails[0].types}}</p>
+    <p style="border-radius:25px;background-color: blue;width:200px;text-align: center;">{{industries}}</p>
+</div>
+</div>
+</div>
+
+
+</div>
+<div style="display: flex;background-color: darkgray;flex-direction: column;">
+    <div style="display: flex;flex-direction: row;">
+        <h5 style="color:black;">Publish date:</h5>
+        <span style="margin-top:10px;color: black;">{{jobDetails[0].publishDate | date:'d/M/YY'}} </span>
+      
+    </div>
+
+    <div style="display: flex;flex-direction: row;">
+        <h5 style="color:black;">Location:</h5>
+        <span style="margin-top:10px;color: black;">{{jobDetails[0].location}} </span>
+      
+    </div>
+
+    <div style="display: flex;flex-direction: row;">
+        <h5 style="color:black;">Reference:</h5>
+        <span style="margin-top:10px;color: black;">{{jobDetails[0].reference}} </span>
+      
+    </div>
+
+    <div style="display: flex;flex-direction: column;">
+        <h5 style="color:black;">Description:</h5>
+        <span style="margin-top:10px;color: black;margin-left:20px;">{{descriptionOne}} </span>
+      
+    </div>
+
+    <div style="display: flex;flex-direction: column;">
+        <h5 style="color:black;">Responsibilities:</h5>
+        <ul *ngFor="let dt of responsibilitiesList">
+            <li style="color: black;margin-left:20px;" *ngIf="dt.length>0">{{dt}} </li>
+        </ul>
+       
+      
+    </div>
+    
+</div>
+</div>

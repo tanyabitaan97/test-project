@@ -1,0 +1,35 @@
+
+<div style="background-color: darkgray;display: grid;">
+   
+    <div *ngFor="let job of jobsList">
+
+        <div style="display:flex;background-color: darkgray;padding:15px;">
+        <img src={{job.companyLogo}} style="width:5vw;">
+        <div style="display:flex;flex-direction: column;">
+        <div>
+       <a (click)="routingForDetails(job.id)">
+        <h4 style="color:black;cursor: pointer;">{{job.title}}</h4>
+      </a> 
+    </div>
+    <div style="display: flex;margin-top:-18px;">
+        <p>Company:{{job.companyName}}</p>
+        <p>Reference:{{job.reference}}</p>
+    </div>
+</div>
+
+    </div>
+
+
+<div class="icon-star" style="float: right;margin-top:-70px;cursor: pointer;"
+ (click)="toggleStar(job.id)" *ngIf="!job.isFavorite"> 
+
+</div>
+
+<div class="active" style="float: right;margin-top:-70px;cursor: pointer;"
+ (click)="toggleStar(job.id)" *ngIf="job.isFavorite"> 
+
+</div>
+
+</div> 
+
+</div>

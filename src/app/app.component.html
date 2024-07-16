@@ -1,0 +1,45 @@
+<div style="background-color: darkgray;display: grid;">
+<h2 style="text-align:center;color:black;">Find your job</h2>
+<ul class="nav nav-tabs mb-3" id="myTab0" role="tablist" 
+style="display: flex;flex-direction: row;">
+    <li class="nav-item" role="presentation">
+      <button
+        data-mdb-tab-init
+        id="home-tab0"
+        data-mdb-target="#home0"
+        type="button"
+        role="tab"
+        aria-controls="home"
+        aria-selected="true" 
+        style="width:550px;"
+        [class.bgwhitecolor]="isSelectedFav"
+        (click)="tabSelectionHome()"
+      >
+        JOBS
+      </button>
+    </li>
+    <li class="nav-item" role="presentation" >
+       
+      <button
+        data-mdb-tab-init
+        class="nav-link"
+        id="profile-tab0"
+        data-mdb-target="#profile0"
+        type="button"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
+        style="width:550px;"
+        [class.bgwhitecolor]="isSelectedHome"
+        (click)="tabSelectionFav()"
+      >
+        FAVORITES
+      </button>
+ 
+    </li>
+
+ 
+  </ul>
+</div>
+
+<router-outlet></router-outlet>
