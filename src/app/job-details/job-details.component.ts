@@ -43,9 +43,9 @@ export class JobDetailsComponent implements OnInit {
    this.descriptionTwo=this.description.split('Responsibilities:')[1]
 
    let data:string[]=[];
-   data=this.descriptionTwo.split('.');
+   data=this.descriptionTwo?.split('.');
 
-   data.forEach((x:string)=>{
+   data?.forEach((x:string)=>{
     this.responsibilitiesList.push(x);
    });
     

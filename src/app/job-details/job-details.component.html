@@ -51,7 +51,7 @@
       
     </div>
 
-    <div style="display: flex;flex-direction: column;">
+    <div style="display: flex;flex-direction: column;" *ngIf="responsibilitiesList.length>0">
         <h5 style="color:black;">Responsibilities:</h5>
         <ul *ngFor="let dt of responsibilitiesList">
             <li style="color: black;margin-left:20px;" *ngIf="dt.length>0">{{dt}} </li>
